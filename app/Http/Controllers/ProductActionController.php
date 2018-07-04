@@ -26,5 +26,16 @@ class ProductActionController extends Controller
         return redirect('/products');
     }
 
+    public function updateAction(Request $request)
+    {
+        $updateInstrument = Instrument::find($request->input('id'));
+        $updateInstrument->title = $request->input('title');
+        $updateInstrument->excerpt = $request->input('excerpt');
+        $updateInstrument->price = $request->input('price');
+        $updateInstrument->colors_id = $request->input('color');
+        $updateInstrument->save();
+        return redirect('/products');
+    }
+
     
 }

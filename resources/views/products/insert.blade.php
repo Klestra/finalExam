@@ -10,11 +10,17 @@
         <label for="price">Prix :</label>
             <input type="text" id="price" name="price">
         <label for="color">Couleurs :</label>
-            <select class="" name="color">
+        <select class="" name="color">
                 @foreach($colors as $color)
                     <option value="{{ $color->id }}">{{ $color->name }}</option>
                 @endforeach
-            </select>
+        </select>
+        <label for="number">Nombres disponible :</label>
+           <select class="" name="numbers">
+                @foreach($numbers as $number)
+                  <option value="{{ $number->id }}">{{ $number->number }}</option>
+                @endforeach
+           </select>
         <input type="submit" name="" value"Insérer le produit">
     </form>
 @endsection

@@ -20,7 +20,15 @@ class ProductController extends Controller
     public function insert()
     {   
         $colors = Color::all();
-        return view('/products/insert', ['colors' => $colors]);
+        $numbers = Number::all();
+        return view('/products/insert', ['colors' => $colors, 'numbers' => $numbers]);
+    }
+
+    public function update (Request $request) {
+        $instrumentUpdate = Instrument::find($request->input('id'));
+        $colors = Color::all();
+        $numbers = Number::all();
+        return view('/products/update', ['instruments' => $instrumentUpdate, 'colors' => $colors, 'numbers' => $numbers]);
     }
 }
 

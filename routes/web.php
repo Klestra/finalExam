@@ -25,10 +25,12 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/products', 'ProductController@show');
     //Route for delete the product
     Route::post('/delete', 'ProductActionController@delete');
-    //Route for insert one product
+    //Route for see form and insert one product
     Route::get('/products/insert', 'ProductController@insert');
     Route::post('/products/insertAction', 'ProductActionController@insertAction');
-
+    //Route for see form and update one product
+    Route::post('/products/update', 'ProductController@update');
+    Route::post('/products/updateAction', 'ProductActionController@updateAction');
 });
 
 
