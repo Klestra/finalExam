@@ -21,7 +21,8 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/', 'HomeController@acceuil');
     //Route for logout the user
     Route::get('/logout','HomeController@logout');
-
+    //Route for show the products
+    Route::get('/products', 'ProductController@show');
 });
 
 
