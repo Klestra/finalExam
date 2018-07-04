@@ -17,7 +17,11 @@ Auth::routes();
 
 //Auth route if you are loggin
 Route::group(['middleware' => ['auth']], function() {
-    Route::get('/', 'HomeController@index');
+    //Default route after the loggin
+    Route::get('/', 'HomeController@acceuil');
+    //Route for logout the user
+    Route::get('/logout','HomeController@logout');
+
 });
 
 

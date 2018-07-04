@@ -25,4 +25,14 @@ class HomeController extends Controller
     {
         return view('loggin');
     }
+
+    public function logout()
+    {
+        return view('loggin');
+    }
+
+    public function acceuil()
+    {
+        return view('acceuil');
+    }
 }
