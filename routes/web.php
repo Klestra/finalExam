@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+//Auth route
+Auth::routes();
+
+//Auth route if you are loggin
+Route::group(['middleware' => ['auth']], function() {
+    Route::get('/', 'HomeController@index');
 });
+
+
