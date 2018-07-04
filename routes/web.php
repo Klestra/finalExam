@@ -23,6 +23,12 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/logout','HomeController@logout');
     //Route for show the products
     Route::get('/products', 'ProductController@show');
+    //Route for delete the product
+    Route::post('/delete', 'ProductActionController@delete');
+    //Route for insert one product
+    Route::get('/products/insert', 'ProductController@insert');
+    Route::post('/products/insertAction', 'ProductActionController@insertAction');
+
 });
 
 

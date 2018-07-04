@@ -2,7 +2,7 @@
     <ul class="">
         <li><a href="{{ url('/') }}">Acceuil</a></li>
         <li><a href="{{ url('/products') }}">Produits</a></li>
-        <li><a href="{{ url('/') }}">Nouveau produit</a></li>
+        <li><a href="{{ url('/products/insert') }}">Nouveau produit</a></li>
         <form class="" action="/logout" method="post">
         @csrf
         {{ Auth::user()->name }}
