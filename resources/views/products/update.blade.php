@@ -1,5 +1,8 @@
 @extends('template')
 @section('content')
+  <div class="product">
+        <h1>Mise à jour du produit</h1>
+  </div>
   <form class="" action="/products/updateAction" method="post">
       @csrf
       <input type="hidden" name="id" value="{{ $instruments->id }}">
@@ -25,6 +28,6 @@
           <option value="{{ $number->id }}">{{ $number->number }}</option>
         @endforeach
       </select>
-      <input type="submit" name="" value="Insert">
+      <input class="update" type="submit" name="" value="Insert">
     </form>
 @endsection

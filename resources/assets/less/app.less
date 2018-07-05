@@ -9,26 +9,45 @@ h1 {
   color: #999999;
 }
 
-
+.product {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    h1 {
+      font-size: 60px;
+      display: flex;
+      color: #404040;
+      justify-content: center;
+      font-family: 'Abril Fatface', cursive;
+      align-items: center;
+    }
+}
 .show {
-    width: 50vw;
+    width: 60vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 30vh;
     margin: 20px;
+    margin-bottom: 40px;
     margin-right: 50px;
     background-color: #999999;
     box-shadow: 5px 5px 5px 5px #404040;
       h2 {
         font-size: 30px;
+        margin: 10px;
         font-family: 'Lato', sans-serif;
-        color: #FFF;
+        color: #661a00;
       }
       p {
-        font-size: 25px;
+        font-size: 20px;
         margin: 8px;
+        color: #404040;
+        font-family: 'Lato', sans-serif;
+        margin: 10px;
+      }
+      &.solo {
+        width: 100%;
       }
 }
 
@@ -76,20 +95,83 @@ h1 {
 }
 
 .acceuil {
+  margin-top: 300px;
   h1 {
     color: #63686e;
     font-size: 60px;
-    margin-bottom: 5px;  
-    margin-top: 250px;
+    margin-bottom: 20px; 
     font-family: 'Abril Fatface', cursive;
   }
   p {
     color: #63686e;
     font-size: 50px;
     margin-left: 250px;
-    margin-bottom: 250px;
+    margin-bottom: 400px; 
   }
 }
 
 
-    
+input {
+	width:  100%;
+	resize: none;		
+	font-size: 20px;		
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 10px;
+}
+
+label {
+	font-size: 23px;
+	font-family: 'Lato', sans-serif;
+	color: #252a30;
+	font-weight: bold;
+}
+
+.update {
+  margin-bottom: 500px; 
+  margin-top: 15px; 
+}
+
+@media screen and (max-width: 620px) {
+  .show {
+    h2 {
+      font-size: 20px;
+    }
+  }
+  .product {
+    h1 {
+      font-size: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .show {
+    h2 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 15px;
+    }
+  }
+  .product {
+    h1 {
+      font-size: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .product {
+    h1 {
+      font-size: 20px;
+    }
+  }
+  .show {
+    h2 {
+      font-size: 10px;
+    }
+    p {
+      font-size: 10px;
+    }
+  }
+}

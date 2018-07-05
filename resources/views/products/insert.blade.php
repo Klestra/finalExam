@@ -1,6 +1,8 @@
 @extends('template')
 @section('content')
-<h1>Insertion d'un produit</h1>
+    <div class="product">
+        <h1>Insertion d'un produit</h1>
+    </div>
     <form class="" action="/products/insertAction" method="post">
     @csrf
         <label for="title">Titre :</label>
@@ -21,6 +23,6 @@
                   <option value="{{ $number->id }}">{{ $number->number }}</option>
                 @endforeach
            </select>
-        <input type="submit" name="" value"Insérer le produit">
+        <input class="update" type="submit" name="" value"Insérer le produit">
     </form>
 @endsection
