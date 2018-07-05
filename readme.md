@@ -2,6 +2,11 @@
 
 Voici mon projet d'examen de certification. J'ai crée une société fictive "MusicShop", qui grâce à son application web, gère les stocks de ses produits. L'application permet tout d'abord d'arriver sur l'auhentification. Une fois enregistré et connecté le gérant de cette société arrive sur une page d'acceuil. Ici il peut voir un méssage de bienvenue avec son nom d'affiché. Il a alors accès à plusieurs onglets dans une barre de navigation ainsi qu'un bouton pour se déconnecté. Il peut de ce fait aller voir les produits disponible sur son site, les supprimer au besoins, en ajouter de nouveaux ou encore de les mettre à jour.
 
+## Informations utile
+
+* J'ai crée une release avec le tag v1.0
+* Il faut créer un nouvelle utilisateur à l'arriver
+
 ## Technologies utilisé
 
 * HTML
