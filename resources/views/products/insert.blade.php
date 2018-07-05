@@ -16,7 +16,7 @@
                 @endforeach
         </select>
         <label for="number">Nombres disponible :</label>
-           <select class="" name="numbers">
+           <select class="" name="">
                 @foreach($numbers as $number)
                   <option value="{{ $number->id }}">{{ $number->number }}</option>
                 @endforeach

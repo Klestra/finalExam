@@ -19,6 +19,12 @@
           @endif
         @endforeach
       </select>
+      <label for="number">Nombres disponible</label>
+      <select id="numbers" name="numbers">
+        @foreach($numbers as $number)
+          <option value="{{ $number->id }}">{{ $number->number }}</option>
+        @endforeach
+      </select>
       <input type="submit" name="" value="Insert">
     </form>
 @endsection

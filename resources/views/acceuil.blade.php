@@ -1,4 +1,7 @@
 @extends('template')
 @section('content')
-    <h1>Bienvenue chez MusicShop {{ Auth::user()->name }}</h1>
+    <div class="acceuil">
+    <h1>Bienvenue chez MusicShop<h1>
+    <p>{{ Auth::user()->name }}</p>
+    </div>
 @endsection

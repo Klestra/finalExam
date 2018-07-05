@@ -11,7 +11,7 @@ class ProductController extends Controller
 {
     public function show()
     {   
-        $instruments = Instrument::all();
+        $instruments = Instrument::all()->load('colors', 'numbers');
         $colors = Color::all();
         $numbers = Number::all();
         return view('/products/show', ['instruments' => $instruments, 'colors' => $colors, 'numbers' => $numbers]);

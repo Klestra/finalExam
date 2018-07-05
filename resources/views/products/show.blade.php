@@ -1,11 +1,16 @@
 @extends('template')
 @section('content')
         <h1>Produits</h1>
+        <div class="show">
         @foreach ($instruments as $value)
-                <p>Titre : {{ $value->title }}</p>
+                <div class="show">
+                <h2>Titre : {{ $value->title }}</h2>
                 <p>Description : {{ $value->excerpt }}</p>
                 <p>Prix : {{ $value->price }}</p>
                 <p>Couleur : {{ $value->colors[0]->name }}</p>
+                @foreach ($value->numbers() as $number)
+                <p>Nombre disponible : {{ $number->number }}</p>
+                @endforeach
                 <form class="" action="delete" method="post">
                 @csrf
                     <input type="hidden" name="id" value="{{ $value->id }}">
@@ -16,5 +21,6 @@
                     <input type="hidden" name="id" value="{{ $value->id }}">
                     <input type="submit" name="" value="Mettre à jour le produit">
                 </form>
+                </div>
         @endforeach
 @endsection
